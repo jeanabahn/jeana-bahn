@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio der Künstlerin Jeana Bahn mit realistischer Ölmalerei, ausgewählten Werken und Kontaktmöglichkeiten.">
+  <title>Künstler Portfolio – Ölmalerei</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="werke.js" defer></script>
+  <script src="app.js" defer></script>
+  <script src="startseite.js" defer></script>
+</head>
+<body>
+  <header>
+    <a class="logo" href="#">Jeana Bahn</a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mainNav">
+      <span class="sr-only">Navigation öffnen</span>
+      <span></span><span></span><span></span>
+    </button>
+    <nav id="mainNav">
+      <a href="#arbeiten">Werke</a>
+      <a href="#about">Über mich</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <img class="hero-background" src="bilder/wald-mit-sonne.jpg" alt="">
+      <div class="hero-text">
+        <h1>Ölmalerei</h1>
+        <p>Realistische Malerei zwischen Licht, Tiefe und Atmosphäre.</p>
+        <a href="#arbeiten" class="btn">Werke ansehen</a>
+      </div>
+    </section>
+
+    <section class="section" id="arbeiten">
+      <div class="section-header">
+        <h2>Werke</h2>
+        <a href="werke-uebersicht.html" class="grid-icon-btn" aria-label="Rasterübersicht ansehen" title="Rasterübersicht ansehen"><span></span><span></span><span></span><span></span></a>
+      </div>
+      <div class="carousel-wrapper" role="region" aria-label="Ausgewählte Werke">
+        <button class="carousel-btn prev" type="button" aria-label="Vorheriges Werk">&#8592;</button>
+        <div class="gallery" id="gallery"></div>
+        <button class="carousel-btn next" type="button" aria-label="Nächstes Werk">&#8594;</button>
+      </div>
+    </section>
+
+    <section class="section about" id="about">
+      <img src="bilder/jeana-bahn.jpg" alt="Jeana Bahn – Künstlerin">
+      <div>
+        <h2>Über mich</h2>
+        <div class="about-meta">
+          <div class="about-meta-item">
+            <span class="about-meta-label">Name</span>
+            <span>Jeana Bahn</span>
+          </div>
+          <div class="about-meta-item">
+            <span class="about-meta-label">Alter</span>
+            <span>26 Jahre</span>
+          </div>
+          <div class="about-meta-item">
+            <span class="about-meta-label">Disziplin</span>
+            <span>Realistische Ölmalerei</span>
+          </div>
+          <div class="about-meta-item">
+            <span class="about-meta-label">Standort</span>
+            <span>Deutschland, Köln</span>
+          </div>
+        </div>
+        <p>Ich bin Künstlerin, spezialisiert auf realistische Ölmalerei. Mich fasziniert die Möglichkeit, Licht, Stimmung und feine Details einzufangen und dadurch Atmosphäre und Ausdruck sichtbar zu machen.</p>
+      </div>
+    </section>
+
+    <section class="section" id="kontakt">
+      <h2>Kontakt</h2>
+      <p class="section-sub">Interesse an einem Werk oder einer Zusammenarbeit? Ich freue mich über Ihre Nachricht.</p>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="contact-card">
+            <div class="contact-icon">✉</div>
+            <div>
+              <div class="contact-label">E-Mail</div>
+              <a href="mailto:jeana.bahn@icloud.com" class="contact-link">jeana.bahn@icloud.com</a>
+            </div>
+          </div>
+          <div class="contact-card">
+            <div class="contact-icon" aria-hidden="true">
+              <svg class="instagram-icon" viewBox="0 0 24 24" fill="none">
+                <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+                <circle cx="12" cy="12" r="4"></circle>
+                <circle cx="17.5" cy="6.5" r="1"></circle>
+              </svg>
+            </div>
+            <div>
+              <div class="contact-label">Instagram</div>
+              <a href="https://www.instagram.com/paintings.jeana/" target="_blank" rel="noopener" class="contact-link">@paintings.jeana</a>
+            </div>
+          </div>
+        </div>
+        <!--<form class="contact-form">
+          <div class="form-row">
+            <input type="text" placeholder="Ihr Name" aria-label="Ihr Name" required>
+            <input type="email" placeholder="Ihre E-Mail" aria-label="Ihre E-Mail" required>
+          </div>
+          <input type="text" placeholder="Betreff (z. B. Werkname)" aria-label="Betreff">
+          <textarea rows="5" placeholder="Ihre Nachricht …" aria-label="Ihre Nachricht" required></textarea>
+          <button type="submit" class="btn">Nachricht senden</button>
+          <div class="form-success" id="formSuccess">Vielen Dank! Ich melde mich bald.</div>
+        </form> -->
+      </div>
+    </section>
+  </main>
+
+  <footer>© 2026 Künstler Portfolio – Ölmalerei</footer>
+</body>
+</html>
