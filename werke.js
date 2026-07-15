@@ -22,6 +22,14 @@ const WERKE = [
     groesse: "80 × 80 cm",
     technik: "Acryl Pouring",
     preis: null
+  },
+  {
+    id: "im-traum",
+    titel: "Im Traum",
+    bilder: ["bilder/im-traum.jpg"],
+    groesse: "40 × 80 cm",
+    technik: "Öl auf Leinwand",
+    preis: null
   }
 ];
 
