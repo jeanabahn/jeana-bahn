@@ -26,7 +26,7 @@ function createModal() {
             <span><strong>Größe:</strong> <span id="modalGroesse"></span></span>
             <span><strong>Technik:</strong> <span id="modalTechnik"></span></span>
           </div>
-          <a href="mailto:jeana.bahn@icloud.com" class="btn modal-request">Werk anfragen</a>
+          <a href="mailto:contact@jeana-bahn.de" class="btn modal-request">Werk anfragen</a>
         </div>
       </div>
     </div>
