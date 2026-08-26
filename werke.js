@@ -30,7 +30,15 @@ const WERKE = [
     groesse: "40 × 80 cm",
     technik: "Öl auf Leinwand",
     preis: null
-  }
+  },
+  {
+    id: "sue",
+    titel: "Sue",
+    bilder: ["bilder/sue.jpg"],
+    groesse: "50 × 40 cm",
+    technik: "Öl auf Leinwand",
+    preis: null
+  },
 ];
 
 function getWerk(id) {
