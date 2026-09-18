@@ -3,13 +3,13 @@ const WERKE = [
     id: "wald-mit-sonne",
     titel: "Wald mit Sonne",
     bilder: ["bilder/wald-mit-sonne.jpg"],
-    groesse: "80 × 80 cm",
+    groesse: "100 × 100 cm",
     technik: "Öl auf Leinwand",
     preis: null
   },
   {
     id: "perlen",
-    titel: "Perlen",
+    titel: "Perlenband",
     bilder: ["bilder/perlen.jpg"],
     groesse: "20 × 50 cm",
     technik: "Öl auf Leinwand",
@@ -39,6 +39,30 @@ const WERKE = [
     technik: "Öl auf Leinwand",
     preis: null
   },
+  {
+    id: "rubinrot",
+    titel: "Rubinrot",
+    bilder: ["bilder/rubinrot.jpg"],
+    groesse: "50 × 40 cm",
+    technik: "Öl auf Leinwand",
+    preis: null
+  },
+  {
+    id: "falsche-perlen",
+    titel: "Falsche Perlen",
+    bilder: ["bilder/falsche-perlen.jpg"],
+    groesse: "80 × 60 cm",
+    technik: "Öl auf Leinwand",
+    preis: null
+  },
+  {
+    id: "lichtspuren",
+    titel: "Lichtspuren",
+    bilder: ["bilder/lichtspuren.jpg"],
+    groesse: "40 × 60 cm",
+    technik: "Öl auf Leinwand",
+    preis: null
+  }
 ];
 
 function getWerk(id) {
