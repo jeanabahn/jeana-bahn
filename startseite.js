@@ -110,7 +110,11 @@ function handleContact(event) {
 document.addEventListener("DOMContentLoaded", () => {
   renderWerke("gallery", "carousel");
   initCarousel();
-  document.querySelector(".carousel-btn.prev").addEventListener("click", () => slide(-1));
-  document.querySelector(".carousel-btn.next").addEventListener("click", () => slide(1));
+  const prevBtn = document.querySelector(".carousel-wrapper .carousel-btn.prev");
+  const nextBtn = document.querySelector(".carousel-wrapper .carousel-btn.next");
+  if (prevBtn) prevBtn.addEventListener("click", () => slide(-1));
+  if (nextBtn) nextBtn.addEventListener("click", () => slide(1));
   document.querySelector(".contact-form").addEventListener("submit", handleContact);
+  // Recalculate carousel when modal closes (scrollbars/layout may change)
+  document.addEventListener("modalClosed", handleCarouselResize);
 });

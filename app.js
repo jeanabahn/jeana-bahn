@@ -67,6 +67,8 @@ function openWerk(id) {
   document.getElementById("modalOverlay").classList.add("open");
   document.body.style.overflow = "hidden";
   document.querySelector(".modal-close").focus();
+  // notify other components that modal opened
+  document.dispatchEvent(new CustomEvent("modalOpened", { detail: { id } }));
 }
 
 function renderModalImage() {
@@ -84,6 +86,8 @@ function closeModal() {
   document.body.style.overflow = "";
   resetZoom();
   if (modalTrigger) modalTrigger.focus();
+  // notify other components that modal closed
+  document.dispatchEvent(new Event("modalClosed"));
 }
 
 function modalSlide(direction) {
