@@ -8,14 +8,21 @@ let resizeFrame = null;
 const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
 function getCardStep() {
-  const card = document.querySelector("#gallery .card");
-  return card ? card.offsetWidth + 20 : 0;
+  const gallery = document.getElementById("gallery");
+  const card = gallery?.querySelector(".card");
+  if (!gallery || !card) return 0;
+
+  const gap = Number.parseFloat(getComputedStyle(gallery).gap) || 20;
+  return card.getBoundingClientRect().width + gap;
 }
 
 function setCarouselPosition(animate) {
   const gallery = document.getElementById("gallery");
+  if (!gallery) return;
+
+  const step = getCardStep();
   gallery.style.transition = animate ? "transform 0.45s ease" : "none";
-  gallery.style.transform = `translateX(-${carouselIndex * getCardStep()}px)`;
+  gallery.style.transform = `translateX(-${carouselIndex * step}px)`;
 }
 
 function slide(direction) {
@@ -46,6 +53,8 @@ function handleCarouselResize() {
 
 function initCarousel() {
   const gallery = document.getElementById("gallery");
+  if (!gallery) return;
+
   const cards = [...gallery.querySelectorAll(".card")];
   originalCount = cards.length;
   const appendClone = (card) => {
@@ -54,12 +63,27 @@ function initCarousel() {
     clone.setAttribute("aria-hidden", "true");
     gallery.appendChild(clone);
   };
+
   cards.forEach(appendClone);
   cards.forEach(appendClone);
   carouselIndex = originalCount;
   setCarouselPosition(false);
 
+  const images = [...gallery.querySelectorAll("img")];
+  const refreshWhenImagesReady = () => {
+    if (images.every((img) => img.complete)) {
+      handleCarouselResize();
+    }
+  };
+
+  images.forEach((img) => {
+    if (img.complete) return;
+    img.addEventListener("load", handleCarouselResize, { once: true });
+  });
+
   const wrapper = document.querySelector(".carousel-wrapper");
+  if (!wrapper) return;
+
   wrapper.addEventListener("mouseenter", () => { carouselHovered = true; });
   wrapper.addEventListener("mouseleave", () => { carouselHovered = false; });
   wrapper.addEventListener("focusin", () => { carouselFocused = true; });
@@ -67,6 +91,7 @@ function initCarousel() {
     if (!wrapper.contains(event.relatedTarget)) carouselFocused = false;
   });
   new ResizeObserver(handleCarouselResize).observe(wrapper);
+  window.addEventListener("load", refreshWhenImagesReady);
 
   setInterval(() => {
     const modalOpen = document.getElementById("modalOverlay").classList.contains("open");

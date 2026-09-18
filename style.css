@@ -238,6 +238,7 @@ nav a:hover {
 .gallery .card {
   position: relative;
   flex: 0 0 500px;
+  min-width: 0;
   aspect-ratio: 3 / 4;
   background: rgba(11, 20, 24, 0.8);
 }
