@@ -1,7 +1,7 @@
 const WERKE = [
   {
     id: "wald-mit-sonne",
-    titel: "Wald mit Sonne",
+    titel: "Whispers of Light",
     bilder: ["bilder/wald-mit-sonne.jpg"],
     groesse: "100 × 100 cm",
     technik: "Öl auf Leinwand",
@@ -9,25 +9,9 @@ const WERKE = [
   },
   {
     id: "perlen",
-    titel: "Perlenband",
+    titel: "Perlen",
     bilder: ["bilder/perlen.jpg"],
-    groesse: "20 × 50 cm",
-    technik: "Öl auf Leinwand",
-    preis: null
-  },
-  {
-    id: "pouring-blau",
-    titel: "Pouring Blau",
-    bilder: ["bilder/pouring-blau.jpg"],
-    groesse: "80 × 80 cm",
-    technik: "Acryl Pouring",
-    preis: null
-  },
-  {
-    id: "im-traum",
-    titel: "Im Traum",
-    bilder: ["bilder/im-traum.jpg"],
-    groesse: "40 × 80 cm",
+    groesse: "20 × 45 cm",
     technik: "Öl auf Leinwand",
     preis: null
   },
@@ -61,6 +45,20 @@ const WERKE = [
     bilder: ["bilder/lichtspuren.jpg"],
     groesse: "40 × 60 cm",
     technik: "Öl auf Leinwand",
+    preis: null
+  },  {
+    id: "im-traum",
+    titel: "Im Traum",
+    bilder: ["bilder/im-traum.jpg"],
+    groesse: "40 × 80 cm",
+    technik: "Öl auf Leinwand",
+    preis: null
+  },{
+    id: "pouring-blau",
+    titel: "Pouring Blau",
+    bilder: ["bilder/pouring-blau.jpg"],
+    groesse: "80 × 80 cm",
+    technik: "Acryl Pouring",
     preis: null
   }
 ];
